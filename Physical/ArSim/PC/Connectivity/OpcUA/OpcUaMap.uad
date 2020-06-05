@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OpcUaSource FileVersion="4">
+  <Aliases>
+    <ACLAliases>
+      <ACL Id="1">
+        <ACE RoleId="1" RoleName="Administrators" Access="0x017F" />
+        <ACE RoleId="2" RoleName="Everyone" Access="0x015F" />
+      </ACL>
+    </ACLAliases>
+    <EURangeViolationAliases>
+      <EURangeViolation Id="1" AclInherit="2" />
+    </EURangeViolationAliases>
+    <EURangesAliases>
+      <EURanges Id="1" AclInherit="0">
+        <EURange />
+      </EURanges>
+      <EURanges Id="2" AclInherit="2">
+        <EURange />
+      </EURanges>
+    </EURangesAliases>
+    <EngineeringUnitAliases>
+      <EngineeringUnit Id="1" UnitId="4279632" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="ampere" Symbol="A" />
+    </EngineeringUnitAliases>
+  </Aliases>
+  <DefaultView AuditEvents="True">
+    <Module Name="&lt;Default&gt;" AuditEvents="True">
+      <GlobalVariables AuditEvents="True" />
+      <Task Name="ServerTask" AuditEvents="True">
+        <Variable Name="TestStructA" AuditEvents="True">
+          <Variable Name="a" AuditEvents="True" />
+          <Variable Name="b" AuditEvents="True" />
+          <Variable Name="c" AuditEvents="True" />
+        </Variable>
+        <Variable Name="VarArr" AuditEvents="True" />
+        <Variable Name="VarX" AuditEvents="True" Historizing="True" HistoryBufferSize="50" HistorySamplingInterval="Timer7" EURangesId="1" EngineeringUnitId="1" />
+        <Variable Name="VarY" AuditEvents="True" EURangeViolationId="1" EURangesId="2" />
+        <Variable Name="VarZ" AuditEvents="True" />
+      </Task>
+      <Task Name="Client01" AuditEvents="True" />
+      <Task Name="Client01a" AuditEvents="True" />
+      <Task Name="Client01b" AuditEvents="True" />
+      <Task Name="Client01c" AuditEvents="True" />
+      <Task Name="Client01d" AuditEvents="True" />
+      <Task Name="Client02" AuditEvents="True" />
+      <Task Name="Client03" AuditEvents="True" />
+      <Task Name="Client03a" AuditEvents="True">
+        <Variable Name="ErrorID" AuditEvents="True" />
+        <Variable Name="UA_Connect_0_ConnectionHdl" AuditEvents="True" />
+        <Variable Name="UA_Connect_0_Execute" AuditEvents="True" />
+        <Variable Name="UA_Connect_0_ServerEndpointUrl" AuditEvents="True" />
+        <Variable Name="UA_Connect_0_SessionConnectInfo" AuditEvents="True" />
+        <Variable Name="UA_ScanMethod_InputArguments" AuditEvents="True" />
+        <Variable Name="UA_ScanMethod_MethodHdl" AuditEvents="True" />
+        <Variable Name="UA_ScanMethod_MethodNodeID" AuditEvents="True" />
+        <Variable Name="UA_ScanMethod_ObjectNodeID" AuditEvents="True" />
+        <Variable Name="UA_ScanMethod_OutputArguments" AuditEvents="True" />
+        <Variable Name="UA_ScanMethod_Results" AuditEvents="True" />
+        <Variable Name="UA_ScanMethod_Setting" AuditEvents="True" />
+        <Variable Name="UA_ScanMethod_Status" AuditEvents="True" />
+        <Variable Name="UA_ScanMethodCall_Execute" AuditEvents="True" />
+        <Variable Name="UA_ScanMethodGetHandle_Execute" AuditEvents="True" />
+      </Task>
+      <Task Name="Client04" AuditEvents="True" />
+      <Task Name="SrvMethod">
+        <Method Name="Multiply" />
+      </Task>
+    </Module>
+    <Module Name="WaterTank" AuditEvents="True">
+      <GlobalVariables AuditEvents="True" />
+      <Task Name="ColdTank" AuditEvents="True">
+        <Variable Name="TankCommands" AutomaticEnable="True" AuditEvents="True">
+          <Variable Name="Fill" AuditEvents="True" />
+          <Variable Name="Empty" AuditEvents="True" />
+          <Variable Name="Stop" AuditEvents="True" />
+        </Variable>
+        <Variable Name="TankStates" AutomaticEnable="True" AuditEvents="True">
+          <Variable Name="Filling" AuditEvents="True" />
+          <Variable Name="Emptying" AuditEvents="True" />
+          <Variable Name="HighestLevel" AuditEvents="True" />
+          <Variable Name="FillingLevel" AuditEvents="True" Historizing="True" HistoryBufferSize="50" />
+        </Variable>
+      </Task>
+      <Task Name="HotTank" AuditEvents="True">
+        <Variable Name="TankCommands" AutomaticEnable="True" AuditEvents="True">
+          <Variable Name="Fill" AuditEvents="True" />
+          <Variable Name="Empty" AuditEvents="True" />
+          <Variable Name="Stop" AuditEvents="True" />
+        </Variable>
+        <Variable Name="TankStates" AutomaticEnable="True" AuditEvents="True">
+          <Variable Name="Filling" AuditEvents="True" />
+          <Variable Name="Emptying" AuditEvents="True" />
+          <Variable Name="HighestLevel" AuditEvents="True" />
+          <Variable Name="FillingLevel" AuditEvents="True" />
+        </Variable>
+      </Task>
+    </Module>
+  </DefaultView>
+</OpcUaSource>

@@ -1,0 +1,64 @@
+(********************************************************************
+ * COPYRIGHT -- B&R Industrial Automation
+ ********************************************************************
+ * Program: Client04
+ * File: Client04.var
+ * Created: July 03, 2014
+ ********************************************************************)
+VAR
+
+	UA_Connect_0 : UA_Connect;
+	ExecuteConnect_0 : BOOL;
+	SessionConnectInfo_0 : UASessionConnectInfo;
+	ConnectionHdl : DWORD := 0;
+	ErrorID : DWORD;
+
+	UA_SubscriptionCreate_0 : UA_SubscriptionCreate;
+	ExecuteSubscriptionCreate_0 : BOOL;
+	PublishingInterval : TIME;
+	PublishingEnable : BOOL;
+	SubscriptionHdl : DWORD := 0;
+
+	UA_NodeGetHandle_0 : UA_NodeGetHandle;
+	ExecuteNodeGetHandle_0 : BOOL;
+	NodeID_Server : UANodeID;
+	NodeHdl : DWORD := 0;
+
+	UA_EventItemAdd_0 : UA_EventItemAdd;
+	ExecuteEventItemAdd_0 : BOOL;
+	NodeID_EventType : UANodeID;
+	EventFieldSelections_0 : ARRAY [0..MAX_INDEX_EVENTFIELDSELECTION] OF UARelativePath;
+	EventFields_0 : ARRAY[0..MAX_INDEX_EVENTFIELDSELECTION] OF STRING[MAX_LENGTH_VARIABLE];
+	EventFieldSelectionCount : UINT;
+	FieldEventType : UANodeID;
+	FieldMessage : UALocalizedText;
+	FieldReceiveTime : DATE_AND_TIME;
+	FieldSeverity : UINT;
+	FieldSourceName : STRING[80];
+	FieldSourceNode : UANodeID;
+	FieldTime : DATE_AND_TIME;
+	FieldClientUserId : STRING[80];
+	FieldOldValue : UAVariantData;
+	FieldNewValue : UAVariantData;
+	FieldEventId : UAByteString;
+
+	UA_EventItemOperate_0 : UA_EventItemOperate;
+	ExecuteEventItemOperate_0 : BOOL;
+	EventItemHdl : DWORD;
+	EventProcessed : BOOL;
+	RemainingEventCount : INT;
+	
+	UA_EventItemRemove_0 : UA_EventItemRemove;
+	ExecuteEventItemRemove_0 : BOOL;
+	
+	UA_NodeReleaseHandle_0 : UA_NodeReleaseHandle;
+	ExecuteNodeReleaseHandle_0 : BOOL;
+	
+	UA_SubscriptionDelete_0 : UA_SubscriptionDelete;
+	ExecuteSubscriptionDelete_0 : BOOL;
+
+	UA_Disconnect_0 : UA_Disconnect;
+	ExecuteDisconnect_0 : BOOL;
+
+
+END_VAR

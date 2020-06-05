@@ -1,0 +1,19 @@
+(********************************************************************
+ * COPYRIGHT -- B&R Industrial Automation
+ ********************************************************************
+ * Program: tank
+ * File: tank.var
+ * Author: mayrk
+ * Created: June 18, 2015
+ ********************************************************************)
+
+VAR
+
+	TankCommands : TankCommandsType := (0);
+	TankStates : TankStatesType := (0);
+
+END_VAR
+
+VAR CONSTANT
+
+END_VAR

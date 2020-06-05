@@ -1,0 +1,39 @@
+(********************************************************************
+ * COPYRIGHT -- B&R Industrial Automation
+ ********************************************************************
+ * Program: Client01c
+ * File: Client01c.var
+ * Created: July 03, 2014
+ ********************************************************************)
+
+VAR
+	UA_Connect_0 : UA_Connect;
+	ExecuteConnect_0 : BOOL;
+	SessionConnectInfo_0 : UASessionConnectInfo;
+	ConnectionHdl : DWORD := 0;
+	ErrorID : DWORD;
+
+	UA_TranslatePath_0 : UA_TranslatePath;
+	ExecuteTranslatePath_0 : BOOL;
+	StartNodeID_Root : UANodeID;
+	TargetNodeID : UANodeID;
+	RelativePath : STRING[255];
+
+	UA_NodeGetHandle_0 : UA_NodeGetHandle;
+	ExecuteNodeGetHandle_0 : BOOL;
+	NodeHdl : DWORD := 0;
+
+	UA_Read_0 : UA_Read;
+	ExecuteRead_0 : BOOL;
+	NodeAddInfo_0 : UANodeAdditionalInfo;
+	Variable_Rd0 : STRING[255];
+	VarA_EngineeringUnit : UAEUInformation;
+	TimestampVarA : DT;
+	
+	UA_NodeReleaseHandle_0 : UA_NodeReleaseHandle;
+	ExecuteNodeReleaseHandle_0 : BOOL;
+	
+	UA_Disconnect_0 : UA_Disconnect;
+	ExecuteDisconnect_0 : BOOL;
+
+END_VAR

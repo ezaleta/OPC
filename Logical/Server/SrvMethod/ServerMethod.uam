@@ -1,0 +1,10 @@
+
+OPCUA_METHOD Multiply
+	ARG_INPUT
+		a : Float := VarA;
+		b : Float := VarB;
+	END_ARG
+	ARG_OUTPUT
+		result : Float := VarResult;
+	END_ARG
+END_OPCUA_METHOD

@@ -1,0 +1,76 @@
+(********************************************************************
+ * COPYRIGHT -- B&R Industrial Automation
+ ********************************************************************
+ * Program: Client03b
+ * File: Client03b.var
+ * Created: July 03, 2014
+ ********************************************************************)
+
+VAR
+
+	UA_Connect_0 : UA_Connect;
+	ExecuteConnect_0 : BOOL;
+	SessionConnectInfo_0 : UASessionConnectInfo;
+	ConnectionHdl : DWORD := 0;
+	ErrorID : DWORD;
+
+	UA_GetNamespaceIndex_PLC : UA_GetNamespaceIndex;
+	ExecuteGetnamespaceindex_PLC : BOOL;
+	NamespaceIndex_PLC : UINT := 0;
+	NamespaceIndex_PLC_Str : STRING[4];
+
+	UA_GetNamespaceIndex_PV : UA_GetNamespaceIndex;
+	ExecuteGetnamespaceindex_PV : BOOL;
+	NamespaceIndex_PV : UINT := 0;
+	NamespaceIndex_PV_Str : STRING[4];
+
+	UA_TranslatePath_0 : UA_TranslatePath;
+	ExecuteTranslatePath_0 : BOOL;
+	StartNodeID_Root : UANodeID;
+	RelativePath_ObjectNode : STRING[255];
+	ObjectNodeID : UANodeID;
+
+	UA_TranslatePath_1 : UA_TranslatePath;
+	ExecuteTranslatePath_1 : BOOL;
+	StartNodeID_ObjectNode : UANodeID;
+	RelativePath_GetAuthorizations : STRING[255];
+	MethodNodeID_GetAuthorizations : UANodeID;
+
+	UA_TranslatePath_2 : UA_TranslatePath;
+	ExecuteTranslatePath_2 : BOOL;
+	RelativePath_SetAuthorizations : STRING[255];
+	MethodNodeID_SetAuthorizations : UANodeID;
+
+	UA_MethodGetHandle_0 : UA_MethodGetHandle;
+	ExecuteMethodGetHandle_0 : BOOL;
+	MethodHdl_GetAuthorizations : DWORD := 0;
+
+	UA_MethodGetHandle_1 : UA_MethodGetHandle;
+	ExecuteMethodGetHandle_1 : BOOL;
+	MethodHdl_SetAuthorizations : DWORD := 0;
+
+	UA_MethodCall_0 : UA_MethodCall;
+	ExecuteMethodCall_0 : BOOL;
+	InputArguments0 : ARRAY[0..9] OF UAMethodArgument;
+	OutputArguments0 : ARRAY[0..9] OF UAMethodArgument;
+	
+	NodeIds : NodeIdArray;
+	Authorizations : AuthorizationArray := (0);
+	NodeIdsStatus : NodeIdStatusArray := (0);
+	
+	UA_MethodCall_1 : UA_MethodCall;
+	ExecuteMethodCall_1 : BOOL;
+	InputArguments1 : ARRAY[0..9] OF UAMethodArgument;
+	OutputArguments1 : ARRAY[0..9] OF UAMethodArgument;
+	AuthorizationsStatus : AuthorizationsStatusArray := (0);
+
+	UA_MethodReleaseHandle_0 : UA_MethodReleaseHandle;
+	ExecuteMethodReleaseHandle_0 : BOOL;
+
+	UA_MethodReleaseHandle_1 : UA_MethodReleaseHandle;
+	ExecuteMethodReleaseHandle_1 : BOOL;
+
+	UA_Disconnect_0 : UA_Disconnect;
+	ExecuteDisconnect_0 : BOOL;
+
+END_VAR

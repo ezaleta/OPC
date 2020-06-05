@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.3.4.119 SP?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="Program" Language="IEC" Description="Server Program">ServerTask</Object>
+    <Object Type="Program" Language="IEC" Description="Implementation of Methods">SrvMethod</Object>
+  </Objects>
+  <Dependencies>
+    <Dependency ObjectName="AsOpcUac" />
+  </Dependencies>
+</Package>

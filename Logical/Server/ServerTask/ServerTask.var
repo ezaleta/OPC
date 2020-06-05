@@ -1,0 +1,17 @@
+(********************************************************************
+ * COPYRIGHT -- B&R Industrial Automation
+ ********************************************************************
+ * Program: ServerTask
+ * File: ServerTask.var
+ * Created: August 07, 2014
+ ********************************************************************
+ * Local variables of program ServerTask
+ ********************************************************************)
+VAR
+	VarX : INT;
+	VarY : INT;
+	VarZ : INT;
+	Enum1 : EnumTyp1;
+	VarArr : ARRAY [0..4] OF INT;
+	TestStructA : TestStructA_Typ;
+END_VAR

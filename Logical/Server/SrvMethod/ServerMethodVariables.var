@@ -1,0 +1,22 @@
+(********************************************************************
+ * COPYRIGHT -- B&R Industrial Automation
+ ********************************************************************
+ * PROGRAM: SrvMethod
+ * File: SrvMethodVariables.var
+ * Created: Oct 13, 2016
+********************************************************************)
+
+VAR
+	UaSrv_MethodCreate_0 : UaSrv_MethodCreate;
+	ExecuteMethodCreate_0 : BOOL;
+	UaSrv_MethodDelete_0 : UaSrv_MethodDelete;
+	ExecuteMethodDelete_0 : BOOL;
+	InputArguments : ARRAY[0..9] OF UAMethodArgument;
+	OutputArguments : ARRAY[0..9] OF UAMethodArgument;
+	Step : UINT;
+	UaSrv_MethodOperate_0 : UaSrv_MethodOperate;
+	ErrorID : DWORD;
+	VarA : REAL;
+	VarB : REAL;
+	VarResult : REAL;
+END_VAR

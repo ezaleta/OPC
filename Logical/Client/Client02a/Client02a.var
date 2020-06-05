@@ -1,0 +1,61 @@
+(********************************************************************
+ * COPYRIGHT -- B&R Industrial Automation
+ ********************************************************************
+ * Program: Client02a
+ * File: Client02a.var
+ * Created: July 03, 2014
+ ********************************************************************)
+
+VAR
+	UA_Connect_0 : UA_Connect;
+	ExecuteConnect_0 : BOOL;
+	SessionConnectInfo_0 : UASessionConnectInfo;
+	ConnectionHdl : DWORD := 0;
+	ErrorID : DWORD;
+
+	UA_GetNamespaceIndex_0 : UA_GetNamespaceIndex;
+	ExecuteGetnamespaceindex_0 : BOOL;
+	NamespaceIndex : UINT := 0;
+
+	UA_NodeGetHandleList_0 : UA_NodeGetHandleList;
+	ExecuteNodeGetHandleList_0 : BOOL;
+	NodeIDs_0 : ARRAY [0..MAX_INDEX_MONITORLIST] OF UANodeID;
+	NodeHdls : ARRAY [0..MAX_INDEX_MONITORLIST] OF DWORD;
+
+	UA_SubscriptionCreate_0 : UA_SubscriptionCreate;
+	ExecuteSubscriptionCreate_0 : BOOL;
+	PublishingInterval : TIME;
+	PublishingEnable : BOOL;
+	SubscriptionHdl : DWORD := 0;
+
+	UA_MonitoredItemAddList_0 : UA_MonitoredItemAddList;
+	ExecuteMonitoredItemAdd_0 : BOOL;
+	NodeAddInfos_0 : ARRAY [0..MAX_INDEX_MONITORLIST] OF UANodeAdditionalInfo;
+	Variables_0 : ARRAY [0..MAX_INDEX_MONITORLIST] OF STRING[255];
+	MonitoringSettings_0 : ARRAY[0..MAX_INDEX_MONITORLIST] OF UAMonitoringParameters;
+	MonitoredItemHdls : ARRAY [0..MAX_INDEX_MONITORLIST] OF DWORD;
+	ValuesChanged			: ARRAY[0..MAX_INDEX_MONITORLIST] OF BOOL;
+	RemainingValueCount		: ARRAY[0..MAX_INDEX_MONITORLIST] OF UINT;
+	TimeStamps				: ARRAY[0..MAX_INDEX_MONITORLIST] OF DT;
+	NodeQualityIDs			: ARRAY[0..MAX_INDEX_MONITORLIST] OF DWORD;
+
+	VarA : INT := 0;
+	VarB : INT := 0;
+	VarC : INT := 0;
+
+	UA_MonitoredItemOperateList_0 : UA_MonitoredItemOperateList;
+	ExecuteMonitoredItemOperate_0 : BOOL;
+	
+	UA_MonitoredItemRemoveList_0 : UA_MonitoredItemRemoveList;
+	ExecuteMonitoredItemRemove_0 : BOOL;
+	
+	UA_SubscriptionDelete_0 : UA_SubscriptionDelete;
+	ExecuteSubscriptionDelete_0 : BOOL;
+	
+	UA_NodeReleaseHandleList_0 : UA_NodeReleaseHandleList;
+	ExecuteNodeReleaseHandleList_0 : BOOL;
+	
+	UA_Disconnect_0 : UA_Disconnect;
+	ExecuteDisconnect_0 : BOOL;
+		
+END_VAR

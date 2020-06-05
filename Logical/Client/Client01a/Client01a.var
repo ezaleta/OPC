@@ -1,0 +1,47 @@
+(********************************************************************
+ * COPYRIGHT -- B&R Industrial Automation
+ ********************************************************************
+ * Program: Client01a
+ * File: Client01.var
+ * Created: July 03, 2014
+ ********************************************************************)
+
+VAR
+	UA_Connect_0 : UA_Connect;
+	ExecuteConnect_0 : BOOL;
+	SessionConnectInfo_0 : UASessionConnectInfo;
+	ConnectionHdl : DWORD := 0;
+	ErrorID : DWORD;
+
+	UA_GetNamespaceIndex_0 : UA_GetNamespaceIndex;
+	ExecuteGetnamespaceindex_0 : BOOL;
+	NamespaceIndex : UINT := 0;
+
+	UA_NodeGetHandleList_0 : UA_NodeGetHandleList;
+	ExecuteNodeGetHandleList_0 : BOOL;
+	NodeIDs_0 : ARRAY [0..MAX_INDEX_NODELIST] OF UANodeID;
+	NodeHdls : ARRAY [0..MAX_INDEX_NODELIST] OF DWORD;
+
+	UA_ReadList_0 : UA_ReadList;
+	ExecuteReadList_0 : BOOL;
+	NodeAddInfo_0 : ARRAY [0..MAX_INDEX_NODELIST] OF UANodeAdditionalInfo;
+	Variables_Rd0 : ARRAY [0..MAX_INDEX_NODELIST] OF STRING[255];
+
+	UA_WriteList_0 : UA_WriteList;
+	ExecuteWriteList_0 : BOOL;
+	Variables_Wr0 : ARRAY [0..MAX_INDEX_NODELIST] OF STRING[255];
+
+	VarA : INT := 0;
+	TimestampVarA : DT;
+	VarB : INT := 0;
+	TimestampVarB : DT;
+	VarC : INT := 0;
+	TimestampVarC : DT;
+	
+	UA_NodeReleaseHandleList_0 : UA_NodeReleaseHandleList;
+	ExecuteNodeReleaseHandleList_0 : BOOL;
+	
+	UA_Disconnect_0 : UA_Disconnect;
+	ExecuteDisconnect_0 : BOOL;
+
+END_VAR

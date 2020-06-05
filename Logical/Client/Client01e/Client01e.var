@@ -1,0 +1,44 @@
+(********************************************************************
+ * COPYRIGHT -- B&R Industrial Automation
+ ********************************************************************
+ * Program: Client01e
+ * File: Client01e.var
+ * Created: July 03, 2014
+ ********************************************************************)
+
+VAR
+
+	UA_Connect_0 : UA_Connect;
+	ExecuteConnect_0 : BOOL;
+	SessionConnectInfo_0 : UASessionConnectInfo;
+	ConnectionHdl : DWORD := 0;
+	ErrorID : DWORD;
+
+	UA_GetNamespaceIndex_0 : UA_GetNamespaceIndex;
+	ExecuteGetnamespaceindex_0 : BOOL;
+	NamespaceIndex : UINT := 0;
+
+	UA_NodeGetHandle_0 : UA_NodeGetHandle;
+	ExecuteNodeGetHandle_0 : BOOL;
+	NodeID_0 : UANodeID;
+	NodeHdl : DWORD := 0;
+
+	UA_Read_0 : UA_Read;
+	ExecuteRead_0 : BOOL;
+	NodeAddInfo_0 : UANodeAdditionalInfo;
+	Variable_Rd0 : STRING[255];
+	VarA : Var_Typ;
+	TimestampVarA : DT;
+
+	UA_Write_0 : UA_Write;
+	ExecuteWrite_0 : BOOL;
+	Variable_Wr0 : STRING[255];
+	VarB : Var_Typ;
+	
+	UA_NodeReleaseHandle_0 : UA_NodeReleaseHandle;
+	ExecuteNodeReleaseHandle_0 : BOOL;
+	
+	UA_Disconnect_0 : UA_Disconnect;
+	ExecuteDisconnect_0 : BOOL;
+
+END_VAR

@@ -1,0 +1,51 @@
+(********************************************************************
+ * COPYRIGHT -- B&R Industrial Automation
+ ********************************************************************
+ * Program: Client03
+ * File: Client03.var
+ * Created: July 03, 2014
+ ********************************************************************)
+VAR
+
+	UA_Connect_0 : UA_Connect;
+	ExecuteConnect_0 : BOOL;
+	SessionConnectInfo_0 : UASessionConnectInfo;
+	ConnectionHdl : DWORD := 0;
+	ErrorID : DWORD;
+
+	UA_GetNamespaceIndex_0 : UA_GetNamespaceIndex;
+	ExecuteGetnamespaceindex_0 : BOOL;
+	NamespaceIndex : UINT := 0;
+
+	UA_MethodGetHandle_0 : UA_MethodGetHandle;
+	ExecuteMethodGetHandle_0 : BOOL;
+	ObjectNodeID : UANodeID;
+	MethodNodeID : UANodeID;
+	MethodHdl : DWORD := 0;
+
+	UA_MethodCall_0 : UA_MethodCall;
+	ExecuteMethodCall_0 : BOOL;
+	InputArguments : ARRAY[0..9] OF UAMethodArgument;
+	OutputArguments : ARRAY[0..9] OF UAMethodArgument;
+	
+	VarA : REAL := 2.0;
+	VarB : REAL := 3.0;
+	VarC : REAL;
+
+	UA_ConnectionGetStatus_0 : UA_ConnectionGetStatus;
+	ExecuteConnectionGetStatus_0 : BOOL;
+	ConnectionStatus : UAConnectionStatus;
+	ServerState : UAServerState;
+	ServiceLevel : BYTE;
+
+	UA_NodeGetInfo_0 : UA_NodeGetInfo;
+	ExecuteNodeGetInfo_0 : BOOL;
+	NodeInfo : UANodeInfo;
+
+	UA_MethodReleaseHandle_0 : UA_MethodReleaseHandle;
+	ExecuteMethodReleaseHandle_0 : BOOL;
+
+	UA_Disconnect_0 : UA_Disconnect;
+	ExecuteDisconnect_0 : BOOL;
+
+END_VAR

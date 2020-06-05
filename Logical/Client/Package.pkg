@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.4.4.12?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="Program" Language="IEC" Description="Read / Write">Client01</Object>
+    <Object Type="Program" Language="IEC" Description="ReadList / WriteList">Client01a</Object>
+    <Object Type="Program" Language="IEC" Description="Read List Array">Client01b</Object>
+    <Object Type="Program" Language="IEC" Description="Read with TranslatePath">Client01c</Object>
+    <Object Type="Program" Language="IEC" Description="Read Bulk">Client01d</Object>
+    <Object Type="Program" Language="IEC" Description="Read / Write Extension Objetcs">Client01e</Object>
+    <Object Type="Program" Language="IEC" Description="Monitored Item">Client02</Object>
+    <Object Type="Program" Language="IEC" Description="Monitored Item List">Client02a</Object>
+    <Object Type="Program" Language="IEC" Description="Method and Diagnostic">Client03</Object>
+    <Object Type="Program" Language="IEC" Description="Call Scan Method (RFID Reader)">Client03a</Object>
+    <Object Type="Program" Language="IEC" Description="Call Authorization Methods">Client03b</Object>
+    <Object Type="Program" Language="IEC" Description="Event Item">Client04</Object>
+    <Object Type="Program" Language="IEC" Description="Bus Controller">Client05</Object>
+  </Objects>
+</Package>
